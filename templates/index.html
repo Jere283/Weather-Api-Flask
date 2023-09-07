@@ -12,9 +12,15 @@
 <body>
     <h1>Weather Data API</h1>
     <p>URL format: http://127.0.0.1:5000/api/v1/station/date </p>
-    <p>URL example: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
-    <img src="{{url_for('static', filename='flask.png')}}" alt="">
+    <p>Temperature of one stations in one date URL example: http://127.0.0.1:5000/api/v1/10/1988-10-25</p>
+    <p>Temperatures of one station: URL example: http://127.0.0.1:5000/api/v1/10</p>
+    <p>Temperatures of one station in a whole year: URL example: http://127.0.0.1:5000/api/annual/v1/10/2008</p>
+    <!--<img src="{{url_for('static', filename='flask.png')}}" alt="">-->
 
+    <h2>Available Stations</h2>
+    <div>
+        {{data | safe}}
+    </div>
 </body>
 
 </html>
